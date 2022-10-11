@@ -18,23 +18,14 @@
 ### 1. Download and install the standard alone software listed above.
 Change the paths of these executable file at default_config/bin_path.py.
 
-
-### 2. PDB files preparing
-<<<<<<< HEAD
-a. All PDB files of seven kinds of ligands-binding proteins and corresponding ligands (DNA, RNA, ATP, HEM, Ca, Mn, Mg) are uploaded to (https://doi.org/10.5281/zenodo.7045931) which are sourced from BioLip.
-=======
-a. All PDB files of seven kinds of ligands-binding proteins and corresponding ligands (DNA, RNA, ATP, HEM, CA, MN, MG) are uploaded to (https://doi.org/10.5281/zenodo.7045931) which are sourced from BioLip.
->>>>>>> 9154bf9990dc22aa8305ca6264edb91a542ce7d5
-   Download the PDBs.zip, move it to Dataset/ and then unzip.
-   Or change the dir_opts['raw_pdb_dir'](in default_config/dir_opts.py) and dir_opts['ligand_dir'] respectively to where the "receptor" and "ligand" folders locate.
+### 2. PDB files preparing.
+a. All PDB files of seven kinds of ligands-binding proteins and corresponding ligands (DNA, RNA, ATP, HEM, Ca, Mn, Mg) are uploaded to (https://doi.org/10.5281/zenodo.7045931) which are sourced from BioLip.Download the PDBs.zip, move it to Dataset/ and then unzip. Or change the dir_opts['raw_pdb_dir'](in default_config/dir_opts.py) and dir_opts['ligand_dir'] respectively to where the "receptor" and "ligand" folders locate.
 
 b. The calulation of MSA information is time-consuming, we have uploaded hmm files of all ligand binding proteins to (https://doi.org/10.5281/zenodo.7045931).
    Download the hmm.zip, move it to Dataset/ and then unzip.
    Or replace the dir_opts['hhm_dir'] to the folder "hmm".
 
-c. Preprocessing
-   Dataset_lists contains the lists of seven types of ligands binding proteins and their binding information.
-
+c. Preprocessing. Dataset_lists contains the lists of seven types of ligands binding proteins and their binding information.
 For example, preparing the featured point cloud and binding interface/sites of DNA or RNA:
 ```
 python prepare_one.py --ligand RNA
@@ -47,11 +38,8 @@ sh train.sh
 ```
 
 ### 4. Predicting
-<<<<<<< HEAD
 Predicting the test set of each ligand binding protein, change the ligand type and pre-trained model path (checkpoints_dir) in train.sh and run:
-=======
-Predicting the test set of each ligand binding protein, change the ligand type and pre-trained model path (checkpoints_dir) in predict.sh and run:
->>>>>>> 9154bf9990dc22aa8305ca6264edb91a542ce7d5
+
 ```
 sh predict.sh
 ```
