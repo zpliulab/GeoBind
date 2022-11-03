@@ -1,20 +1,19 @@
-##  GeoBind: nucleic acid binding sites segmentation on protein surface using geometric deep learning.
+## GeoBind: nucleic acid binding sites segmentation on protein surface using geometric deep learning.
 ## Standard alone Software prerequisites
 * [Conda](https://docs.conda.io/en/latest/miniconda.html) Conda is recommended for environment management.
-* [Python](https://www.python.org/) (3.6).
-* [reduce](http://kinemage.biochem.duke.edu/software/reduce.php) (3.23). To add protons to proteins.
-* [MSMS](http://mgltools.scripps.edu/packages/MSMS/) (2.6.1). To compute the surface of proteins.
-* [hhblits](https://github.com/soedinglab/hh-suite) (3.3.0) To generate HMM.
+* [Python](https://www.python.org/) (v3.7.12).
+* [reduce](http://kinemage.biochem.duke.edu/software/reduce.php) (3.23). Add protons to proteins.
+* [MSMS](http://mgltools.scripps.edu/packages/MSMS/) (2.6.1). Compute the surface of proteins.
+* [hhblits](https://github.com/soedinglab/hh-suite) (3.3.0) Generate HMM profile.
 ## Python packages.
 * [Pymesh](https://pymesh.readthedocs.io/en/latest/installation.html) (v0.3). For mesh of protein management and downsampling.
-* [BioPython](https://github.com/biopython/biopython) (1.78). To parse PDB files.
-* [Pytorch](https://pytorch.org/) (1.10.1). Pytorch with GPU version. Use to model, train, and evaluate the actual neural networks.
-* [pykeops](https://www.kernel-operations.io/keops/index.html) (2.1). For computation of all point interactions computation of a protein surface.
-* [Pytorch-geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html). For geometric neural networks.
-* [scikit-learn](https://scikit-learn.org/) (0.24.1). For point cloud space searching and some evaluation metrics.
+* [BioPython](https://github.com/biopython/biopython) (v1.78). To parse PDB files.
+* [Pytorch](https://pytorch.org/) (v1.10.1). Pytorch with GPU version. Use to model, train, and evaluate the actual neural networks.
+* [pykeops](https://www.kernel-operations.io/keops/index.html) (v2.1). For computation of all point interactions computation of a protein surface.
+* [Pytorch-geometric](https://pytorch-geometric.readthedocs.io/en/latest/index.html) (v2.0.4). For geometric neural networks.
+* [scikit-learn](https://scikit-learn.org/) (v0.24.1). For point cloud space searching and model evaluation.
 
 ## Specific usage
-
 ### 1. Download and install the standard alone software listed above.
 Change the paths of these executable file at default_config/bin_path.py.
 
@@ -31,12 +30,10 @@ For example, preparing the featured point cloud and binding interface/sites of D
 python prepare_one.py --ligand RNA
 python prepare_one.py --ligand DNA
 ```
-
 ### 3. Training from scratch. Change the ligand type and pre-trained model path (checkpoints_dir) in predict.sh and run:
 ```
 sh train.sh
 ```
-
 ### 4. Predicting
 Predicting the test set of each ligand binding protein, change the ligand type and pre-trained model path (checkpoints_dir) in train.sh and run:
 
@@ -48,7 +45,5 @@ For metal ion prediction task, the pretrained model needs input features of hmm 
 ### 5. Predicting binding sites of proteins not existing in Dataset_lists.
 There is an easy using webserver www.zpliulab.cn/GeoBind. For large-scale predicting, we will upload a GeoBindProcessor without sparse the ligand structure (on going).
 
-### TODO
-The source code of GeoBind models and Protein Processor will be released as soon as the paper is published.
 ## License
 GeoBind is released under an [MIT License](LICENSE).
