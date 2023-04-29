@@ -43,7 +43,7 @@ sh predict.sh
 For metal ion prediction task, the pretrained model needs input features of hmm and chemi features. For metal ion prediction task, the pretrained model needs input features of hmm, chemi and geo features.
 
 ### 5. Predicting binding sites of proteins not existing in Dataset_lists.
-There is an easy using webserver www.zpliulab.cn/GeoBind. For large-scale predicting, we will upload a GeoBindProcessor without sparse the ligand structure (on going).
+There is an easy using webserver www.zpliulab.cn/GeoBind.
 
 ## License
 GeoBind is released under an [MIT License](LICENSE).
