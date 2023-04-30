@@ -35,8 +35,8 @@ class DataLoader:
         if self.opt.ligand == 'RNA':
             train_file = './Dataset_lists/GeoBind/RNA-663_Train.txt'
             test_file = './Dataset_lists/GeoBind/RNA-157_Test.txt'
-            train_file = './Dataset_lists/GraphBind/RNA-495_Train.txt'
-            test_file = './Dataset_lists//GraphBind/RNA-117_Test.txt'
+            # train_file = './Dataset_lists/GraphBind/RNA-495_Train.txt'
+            # test_file = './Dataset_lists//GraphBind/RNA-117_Test.txt'
         elif self.opt.ligand == 'DNA':
             train_file = './Dataset_lists/GeoBind/DNA-719_Train.txt'
             test_file = './Dataset_lists/GeoBind/DNA-179_Test.txt'
@@ -81,17 +81,18 @@ class DataLoader:
 
         meta =[]
         label = []
-        label_radio = []
         pos_label = []
         success = []
         data_label_dir = self.opt.dir_opts['data_label']
         for rbp in tqdm.tqdm(rbps):
+            # if rbp != '4pbu:O:O1':
+            #     continue
             if os.path.exists(os.path.join(data_label_dir, rbp)):
                 with open(os.path.join(data_label_dir, rbp), 'rb') as pid:
                     data = cPickle.load(pid)
                     data1 = Data(
                                     xyz=torch.from_numpy(data['xyz']).type(torch.float32),
-                                    nuv=torch.from_numpy(data['nuv_BOARD']).type(torch.float32).contiguous(),
+                                    nuv=torch.from_numpy(data['nuv']).type(torch.float32).contiguous(),
                                     chemi=torch.zeros([data['xyz_type'].shape[0], 6]).scatter_(1,  torch.from_numpy(data['xyz_type']).type(torch.int64), 1),
                                     hmm=torch.from_numpy(data['hmm']).type(torch.float32),
                                     geo=torch.from_numpy(data['geo']).type(torch.float32),
@@ -100,15 +101,11 @@ class DataLoader:
                                     site_point=torch.tensor(data['site_point']),
                                     pdb_id=rbp,
                                 )
-                    if torch.sum(data1['site']) == 0:
-                        print(rbp,'site error')
-                        continue
-                    if 'geo' in self.opt.input_feature_type and torch.sum(torch.isnan(data1['geo'])) > 0:
-                        print(rbp,'geo error')
-                        continue
+
                     label.append(data['site'])
                     this_label_num = np.sum(data['site'])
-                    label_radio.append(this_label_num/data['site'].shape[0])
+                    if this_label_num == 0:
+                        continue
                     pos_label.append(this_label_num)
                     meta.append(data1)
                     success.append(rbp+'\n')
