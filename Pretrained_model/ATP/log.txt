@@ -35,3 +35,5 @@ loading best model, changeing learning rate to 0.0001000
 Epoch:24, train_loss:0.091, train_auc:0.966, val_loss:0.098, val_auc:0.954, test_loss:0.100, test_auc:0.964
 Epoch:25, train_loss:0.091, train_auc:0.966, val_loss:0.097, val_auc:0.956, test_loss:0.101, test_auc:0.964
 Epoch:26, train_loss:0.090, train_auc:0.966, val_loss:0.097, val_auc:0.955, test_loss:0.101, test_auc:0.964
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/ATP/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/ATP/best.pth

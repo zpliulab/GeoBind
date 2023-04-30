@@ -42,8 +42,8 @@ def val_batch(data, model):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    if not os.path.exists(args.checkpoints_dir):
-        os.mkdir(args.checkpoints_dir)
+    # if not os.path.exists(args.checkpoints_dir):
+    #     os.mkdir(args.checkpoints_dir)
     base_dir = 'Dataset/' + args.ligand + '/'
     dir_opts = dir_opts(base_dir)
     setattr(args, 'dir_opts', dir_opts)
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     proba_val = []
     true_val = []
     for i, data in enumerate(dataset_val):
-
+        print(data.pdb_id)
         loss_, proba_ = val_batch(data, model)
         # val_loss_on_epoch.append(loss_.detach().cpu().numpy())
         if args.loss_type == 'interface':

@@ -1,10 +1,8 @@
 import os
 from GeoBindProcessor import GeoBindProcessor
 from default_config.dir_options import dir_opts
-import numpy as np
 import argparse
-import shutil
-import time
+
 def get_parser():
     parser = argparse.ArgumentParser(description="Network parameters")
 
@@ -76,26 +74,13 @@ if __name__ == "__main__":
         pair = item.split('\t')[0]
         anno = item.split('\t')[1] if len(item.split('\t'))>1 else None
         if args.pdbid != '' and args.pdbid!= pair:
-            # print('continue', args.pdbid, pair)
             continue
         #if not specify the binding sites given in residue id. GeoBind will automatically compute the Binding sites
         if os.path.exists(os.path.join(dir_opts['data_label'], pair)):
             continue
         print(index, item)
-        # try:
-        time_start=time.time()
         try:
             rbp=GeoBindProcessor(pair, anno, args.ligand, dir_opts, Gaussian_window=args.Gaussian_window)
             rbp.get_data()
         except:
             continue
-        # time_end=time.time()
-        # print('time cost', time_end - time_start)
-        # chain = pair.split(':')[1]
-        # time_string = str(len(rbp.seq[chain])) + ' ' + str(time_end - time_start) +'\n'
-        # #print('site_biolip', len(rbp.site_by_biolip), 'site_on_surface', np.sum(rbp.site))
-        # print(time_string)
-        # with open('RNA_time.txt', 'a+') as pid:
-        #     pid.write(time_string)
-        # except:
-        #     print('preprocessing error')

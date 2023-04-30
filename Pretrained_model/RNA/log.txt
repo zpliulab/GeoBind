@@ -68,3 +68,8 @@ loading best model, changeing learning rate to 0.0000100
 Epoch:46, train_loss:0.161, train_aupr:0.920, val_loss:0.174, val_aupr:0.911, test_loss:0.192, test_aupr:0.909
 Epoch:47, train_loss:0.161, train_aupr:0.920, val_loss:0.174, val_aupr:0.911, test_loss:0.192, test_aupr:0.909
 Epoch:48, train_loss:0.161, train_aupr:0.920, val_loss:0.174, val_aupr:0.911, test_loss:0.192, test_aupr:0.909
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA2/best.pth

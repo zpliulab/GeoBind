@@ -56,17 +56,13 @@ if __name__ == '__main__':
 
     model = GeoBind(args)
     early_stop = EarlyStopping(opt=args, path=os.path.join(args.checkpoints_dir, 'best.pth'))
-    # model.load_network()
-    # writer = Writer(args)
     total_steps = 0
 
     auc_best = 0
     time1 = time.time()
     for epoch in range(1000):
-        # printf(epoch)
         epoch_start_time = time.time()
         epoch_iter = 0
-
         loss_train = []; proba_train = []; true_train = []
         for i, data in enumerate(dataset_train):
             loss_, proba_ = train_batch(data, model)

@@ -65,3 +65,5 @@ loading best model, changeing learning rate to 0.0000100
 Epoch:46, train_loss:0.106, train_auc:0.981, val_loss:0.123, val_auc:0.977, test_loss:0.129, test_auc:0.969
 Epoch:47, train_loss:0.106, train_auc:0.981, val_loss:0.123, val_auc:0.977, test_loss:0.129, test_auc:0.969
 Epoch:48, train_loss:0.106, train_auc:0.981, val_loss:0.123, val_auc:0.977, test_loss:0.129, test_auc:0.969
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/HEM/best.pth
+best model loaded: /home/aoli/Documents/website/app/GeoBind/Pretrained_model/HEM/best.pth
