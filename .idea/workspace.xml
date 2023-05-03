@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d3b35455-04c3-4abd-9bc4-e7bb59fa47d6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JupyterTrust" id="f007ac5e-a8b4-43a2-bab4-56333dad8dfb" />
+  <component name="ProjectId" id="2P9IbSpArJG8IaapqupdcsJSA3R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="GeoBind" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="CUDA_PATH" value="/home/aoli/tools/cuda10.0" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://aoli@180.201.11.248:22/home/aoli/miniconda3/envs/geobind/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
+      <option name="PARAMETERS" value="--ligand RNA --checkpoints_dir /home/aoli/Documents/website/app/GeoBind/Pretrained_model/RNA --device cuda:0 --radius 12.0 --n_layers 4 --input_feature_type hmm chemi geo --batch_size 1 --lr 0.001 --loss_type interface" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3b35455-04c3-4abd-9bc4-e7bb59fa47d6" name="Default Changelist" comment="" />
+      <created>1682862942281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682862942281</updated>
+      <workItem from="1682862943492" duration="3938000" />
+      <workItem from="1683097241208" duration="709000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="126" key="#Deployment" timestamp="1682866213467">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="126" key="#Deployment/0.0.1440.900@0.0.1440.900" timestamp="1682866213467" />
+    <state x="184" y="123" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1682868381326">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="123" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1682868381326" />
+    <state width="699" height="283" key="GridCell.Tab.0.bottom" timestamp="1682933424454">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1682868435078" />
+    <state width="699" height="283" key="GridCell.Tab.0.bottom/0.25.1440.795@0.25.1440.795" timestamp="1682933424454" />
+    <state width="699" height="283" key="GridCell.Tab.0.center" timestamp="1682933424453">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="340" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1682868435076" />
+    <state width="699" height="283" key="GridCell.Tab.0.center/0.25.1440.795@0.25.1440.795" timestamp="1682933424453" />
+    <state width="699" height="283" key="GridCell.Tab.0.left" timestamp="1682933424452">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="340" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1682868435076" />
+    <state width="699" height="283" key="GridCell.Tab.0.left/0.25.1440.795@0.25.1440.795" timestamp="1682933424452" />
+    <state width="699" height="283" key="GridCell.Tab.0.right" timestamp="1682933424453">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="340" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1682868435077" />
+    <state width="699" height="283" key="GridCell.Tab.0.right/0.25.1440.795@0.25.1440.795" timestamp="1682933424453" />
+    <state width="699" height="283" key="GridCell.Tab.1.bottom" timestamp="1682933424454">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="283" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1682866652060" />
+    <state width="699" height="283" key="GridCell.Tab.1.bottom/0.25.1440.795@0.25.1440.795" timestamp="1682933424454" />
+    <state width="699" height="283" key="GridCell.Tab.1.center" timestamp="1682933424454">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="283" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1682866652057" />
+    <state width="699" height="283" key="GridCell.Tab.1.center/0.25.1440.795@0.25.1440.795" timestamp="1682933424454" />
+    <state width="699" height="283" key="GridCell.Tab.1.left" timestamp="1682933424454">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="283" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1682866652055" />
+    <state width="699" height="283" key="GridCell.Tab.1.left/0.25.1440.795@0.25.1440.795" timestamp="1682933424454" />
+    <state width="699" height="283" key="GridCell.Tab.1.right" timestamp="1682933424454">
+      <screen x="0" y="25" width="1440" height="795" />
+    </state>
+    <state width="699" height="283" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1682866652058" />
+    <state width="699" height="283" key="GridCell.Tab.1.right/0.25.1440.795@0.25.1440.795" timestamp="1682933424454" />
+    <state x="229" y="100" key="SettingsEditor" timestamp="1682866275899">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="100" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1682866275899" />
+    <state x="510" y="344" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1682866274338">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="510" y="344" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1440.900@0.0.1440.900" timestamp="1682866274338" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GeoBind$predict.coverage" NAME="predict Coverage Results" MODIFIED="1682868435066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
