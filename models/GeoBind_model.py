@@ -101,10 +101,7 @@ class GeoBind(nn.Module):
         ).to(self.device)
 
         self.optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, amsgrad=True)
-        if self.opt.loss_type == 'interface':
-            self.criterion = torch.nn.CrossEntropyLoss().to(self.device)
-        else:
-            self.criterion = torch.nn.NLLLoss().to(self.device)
+        self.criterion = torch.nn.CrossEntropyLoss().to(self.device)
 
     def set_input(self, data):
         data.to(self.device)

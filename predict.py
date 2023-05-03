@@ -66,6 +66,8 @@ if __name__ == '__main__':
         if args.loss_type == 'interface':
             proba_val.append(proba_.detach().cpu().numpy())
             true_val.append(model.P['y'].detach().cpu().numpy())
+            print(data.pdb_id, roc_auc_score(model.P['y'].detach().cpu().numpy(), proba_.detach().cpu().numpy()))
+
         else:
             proba_val.append(proba_.detach().cpu().numpy())
             true_val.append(model.P['site'].detach().cpu().numpy())
@@ -80,6 +82,7 @@ if __name__ == '__main__':
         if args.loss_type == 'interface':
             proba_test.append(proba_.detach().cpu().numpy())
             true_test.append(model.P['y'].detach().cpu().numpy())
+
         else:
             proba_test.append(proba_.detach().cpu().numpy())
             true_test.append(model.P['site'].detach().cpu().numpy())
